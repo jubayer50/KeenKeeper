@@ -17,4 +17,3 @@ const MyNavLinks = ({ to, children }) => {
 };
 
 export default MyNavLinks;
-<NavLink></NavLink>;

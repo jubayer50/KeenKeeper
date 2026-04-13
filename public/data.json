@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "David Kim",
-    "picture": "https://example.com/david1.jpg",
+    "picture": "https://i.ibb.co.com/DPxzZm0P/img-1.png",
     "email": "david.kim1@example.com",
     "days_since_contact": 62,
     "status": "almost_due",
@@ -14,7 +14,7 @@
   {
     "id": 2,
     "name": "Emma Wilson",
-    "picture": "https://example.com/emma1.jpg",
+    "picture": "https://i.ibb.co.com/Kcv98VK4/img-2.png",
     "email": "emma.wilson1@example.com",
     "days_since_contact": 62,
     "status": "overdue",
@@ -26,7 +26,7 @@
   {
     "id": 3,
     "name": "Lisa Nakamura",
-    "picture": "https://example.com/lisa1.jpg",
+    "picture": "https://i.ibb.co.com/Wpg7t5Hx/img-3.png",
     "email": "lisa.nakamura1@example.com",
     "days_since_contact": 62,
     "status": "overdue",
@@ -38,7 +38,7 @@
   {
     "id": 4,
     "name": "James Wright",
-    "picture": "https://example.com/james1.jpg",
+    "picture": "https://i.ibb.co.com/0pj1mThc/img-4.png",
     "email": "james.wright1@example.com",
     "days_since_contact": 62,
     "status": "overdue",
@@ -50,7 +50,7 @@
   {
     "id": 5,
     "name": "David Kim",
-    "picture": "https://example.com/david2.jpg",
+    "picture": "https://i.ibb.co.com/hFVMRk78/img-5.png",
     "email": "david.kim2@example.com",
     "days_since_contact": 62,
     "status": "overdue",
@@ -62,7 +62,7 @@
   {
     "id": 6,
     "name": "Emma Wilson",
-    "picture": "https://example.com/emma2.jpg",
+    "picture": "https://i.ibb.co.com/1Y0ct7qq/img-6.png",
     "email": "emma.wilson2@example.com",
     "days_since_contact": 62,
     "status": "on_track",
@@ -74,7 +74,7 @@
   {
     "id": 7,
     "name": "Lisa Nakamura",
-    "picture": "https://example.com/lisa2.jpg",
+    "picture": "https://i.ibb.co.com/qLcLhzhJ/img-7.png",
     "email": "lisa.nakamura2@example.com",
     "days_since_contact": 62,
     "status": "on_track",
@@ -86,7 +86,7 @@
   {
     "id": 8,
     "name": "James Wright",
-    "picture": "https://example.com/james2.jpg",
+    "picture": "https://i.ibb.co.com/ymr02Qkr/img-8.png",
     "email": "james.wright2@example.com",
     "days_since_contact": 62,
     "status": "almost_due",
@@ -98,7 +98,7 @@
   {
     "id": 9,
     "name": "David Kim",
-    "picture": "https://example.com/david3.jpg",
+    "picture": "https://i.ibb.co.com/ZzJjMF7d/img-9.png",
     "email": "david.kim3@example.com",
     "days_since_contact": 62,
     "status": "almost_due",
@@ -110,7 +110,7 @@
   {
     "id": 10,
     "name": "Emma Wilson",
-    "picture": "https://example.com/emma3.jpg",
+    "picture": "https://i.ibb.co.com/Q3Rk4fSk/img-10.png",
     "email": "emma.wilson3@example.com",
     "days_since_contact": 62,
     "status": "overdue",
@@ -122,7 +122,7 @@
   {
     "id": 11,
     "name": "Lisa Nakamura",
-    "picture": "https://example.com/lisa3.jpg",
+    "picture": "https://i.ibb.co.com/FtPzv7Q/img-11.png",
     "email": "lisa.nakamura3@example.com",
     "days_since_contact": 62,
     "status": "overdue",
@@ -134,7 +134,7 @@
   {
     "id": 12,
     "name": "James Wright",
-    "picture": "https://example.com/james3.jpg",
+    "picture": "https://i.ibb.co.com/HDhQJ1Gd/img-12.png",
     "email": "james.wright3@example.com",
     "days_since_contact": 62,
     "status": "on_track",

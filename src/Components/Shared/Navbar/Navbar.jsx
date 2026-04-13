@@ -17,7 +17,7 @@ const Navbar = () => {
           </Link>
         </div>
 
-        <div className="flex flex-col gap-3 md:flex-row items-center font-semibold">
+        <div className="flex gap-3 font-semibold">
           <MyNavLinks to={"/"}>
             <RiHome2Line className="text-xl" /> Home
           </MyNavLinks>
