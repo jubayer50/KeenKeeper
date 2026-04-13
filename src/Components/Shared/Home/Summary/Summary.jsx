@@ -2,7 +2,7 @@ import React from "react";
 
 const Summary = () => {
   return (
-    <div className="max-w-268.5 mx-auto py-10 px-2 border-b border-[#E9E9E9]">
+    <div className="max-w-277.5 mx-auto py-10 px-2 border-b border-[#E9E9E9]">
       <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         <div className="text-center space-y-2 bg-white shadow-sm rounded-lg py-8 ">
           <h2 className="text-[32px] font-semibold text-[#244D3F]">10</h2>

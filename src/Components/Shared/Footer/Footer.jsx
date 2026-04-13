@@ -37,7 +37,7 @@ const Footer = () => {
         <div></div>
       </div>
 
-      <div className="py-8 border-t border-[#1A886220]">
+      <div className="py-8 border-t border-[#1A886220] max-w-277.5 mx-auto">
         <div className="flex flex-col md:flex-row items-center gap-3 md:justify-between">
           <div className="text-[#FAFAFA]">
             <p>© 2026 KeenKeeper. All rights reserved.</p>
