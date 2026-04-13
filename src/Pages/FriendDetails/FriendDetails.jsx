@@ -1,10 +1,21 @@
 import React from "react";
 import { useParams } from "react-router";
+import useFriends from "../../Hooks/useFriends";
 
 const FriendDetails = () => {
   const { Id } = useParams();
-  console.log(Id, "from use params");
-  return <div>Friend details is coming soon.</div>;
+  const { friends, setFriends, loading } = useFriends();
+
+  const targetFriend = friends.find((friend) => friend.id === Number(Id));
+  console.log(targetFriend);
+
+  return (
+    <div>
+      <div></div>
+
+      <div></div>
+    </div>
+  );
 };
 
 export default FriendDetails;
