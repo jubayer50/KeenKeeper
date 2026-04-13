@@ -5,7 +5,7 @@ import Summary from "../../Components/Shared/Home/Summary/Summary";
 
 const Home = () => {
   return (
-    <div>
+    <div className="bg-[#F8FAFC]">
       <Banner></Banner>
 
       <Summary></Summary>

@@ -7,7 +7,7 @@ import { FaChartLine } from "react-icons/fa";
 
 const Navbar = () => {
   return (
-    <div className="py-4 shadow">
+    <div className="py-4 border-b border-[#E9E9E9]">
       <div className="max-w-360 mx-auto px-2 flex flex-col md:flex-row items-center md:justify-between gap-5">
         <div>
           <Link to={"/"}>
