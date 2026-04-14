@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useParams } from "react-router";
 import useFriends from "../../Hooks/useFriends";
 import Loading from "../../Components/Loading/Loading";
@@ -11,13 +11,48 @@ import { FiPhoneCall } from "react-icons/fi";
 import { LuVideo } from "react-icons/lu";
 import { MdOutlineTextsms } from "react-icons/md";
 import { FaHistory } from "react-icons/fa";
+import { toast } from "react-toastify";
 
 const FriendDetails = () => {
   const { Id } = useParams();
   const { friends, loading } = useFriends();
 
   const targetFriend = friends.find((friend) => friend.id === Number(Id));
-  console.log(targetFriend, "t");
+  // console.log(targetFriend, "t");
+
+  const [call, setCall] = useState([]);
+  const [test, setText] = useState([]);
+  const [video, setVideo] = useState([]);
+
+  const handleCall = (targetFriend) => {
+    console.log(targetFriend, "audio call");
+    toast.success(`${targetFriend.name} is calling Now!`, {
+      position: "top-center",
+      pauseOnHover: false,
+      autoClose: 1000,
+      hideProgressBar: true,
+    });
+  };
+
+  const handleText = (targetFriend) => {
+    console.log(targetFriend, "text");
+    toast.success(`${targetFriend.name} is texting Now!`, {
+      position: "top-center",
+      pauseOnHover: false,
+      autoClose: 1000,
+      hideProgressBar: true,
+    });
+  };
+
+  const handleVideo = (targetFriend) => {
+    console.log(targetFriend, "Video call");
+    toast.success(`${targetFriend.name} is video calling Now!`, {
+      position: "top-center",
+      pauseOnHover: false,
+      autoClose: 1000,
+      hideProgressBar: true,
+    });
+  };
 
   return (
     <div>
@@ -26,7 +61,7 @@ const FriendDetails = () => {
       ) : (
         <div className="bg-[#F8FAFC]">
           <div className="max-w-277.5 mx-auto px-2 py-16 md:py-20 grid grid-cols-1 md:grid-cols-3 gap-6">
-            {/* right side culm */}
+            {/* left side culm */}
             <div className="md:col-span-">
               <div className="space-y-4">
                 <div className=" space-y-4 bg-white p-6 rounded-lg shadow">
@@ -62,7 +97,7 @@ const FriendDetails = () => {
                   </div>
                 </div>
 
-                {/* right culms tree btns */}
+                {/* left culms tree btns */}
                 <div className="font-medium text-[#1F2937] flex flex-col gap-2">
                   <div className="p-4 border border-[#E9E9E9] rounded-md cursor-pointer w-full flex justify-center bg-white">
                     <button className="flex gap-2 items-center">
@@ -85,8 +120,9 @@ const FriendDetails = () => {
               </div>
             </div>
 
-            {/* left side culm */}
+            {/* Right side culm */}
             <div className="md:col-span-2 space-y-6">
+              {/* day, goal, next due section */}
               <div className="flex flex-wrap justify-center md:justify-between gap-6">
                 <div className="bg-white p-8 rounded-lg space-y-2 text-center w-full md:w-fit">
                   <h2 className="text-[#244D3F] font-semibold text-3xl">
@@ -137,15 +173,24 @@ const FriendDetails = () => {
                 </h2>
 
                 <div className="flex flex-col md:flex-row justify-between gap-4 text-[#1F2937] text-xl">
-                  <button className="btn flex-1 gap-2 py-4 md:py-7">
+                  <button
+                    className="btn flex-1 gap-2 py-4 md:py-7"
+                    onClick={() => handleCall(targetFriend)}
+                  >
                     <FiPhoneCall className="text-2xl" /> Call
                   </button>
 
-                  <button className="btn flex-1 gap-2 py-4 md:py-7">
+                  <button
+                    className="btn flex-1 gap-2 py-4 md:py-7"
+                    onClick={() => handleText(targetFriend)}
+                  >
                     <MdOutlineTextsms className="text-2xl" /> Text
                   </button>
 
-                  <button className="btn flex-1 gap-2 py-4 md:py-7">
+                  <button
+                    className="btn flex-1 gap-2 py-4 md:py-7"
+                    onClick={() => handleVideo(targetFriend)}
+                  >
                     <LuVideo className="text-2xl" /> Video
                   </button>
                 </div>
