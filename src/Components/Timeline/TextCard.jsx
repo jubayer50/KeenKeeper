@@ -2,7 +2,8 @@ import React from "react";
 import TextIcon from "../../assets/text.png";
 
 const TextCard = ({ item }) => {
-  console.log(item, "from textcard");
+  // console.log(item, "from textcard");
+
   return (
     <div className="bg-white p-4 rounded-lg border border-[#E9E9E9]">
       <div className="flex gap-4 items-center">

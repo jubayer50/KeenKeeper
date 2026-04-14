@@ -26,9 +26,7 @@ const Stats = () => {
 
           {text.length == 0 && call.length == 0 && video.length == 0 ? (
             <div>
-              <h2 className="py-20 text-center text-3xl">
-                No data for pie PieChart.
-              </h2>
+              <h2 className="py-10 text-center text-lg">No data for Chart.</h2>
             </div>
           ) : (
             <div className=" flex justify-center items-center mt-4">

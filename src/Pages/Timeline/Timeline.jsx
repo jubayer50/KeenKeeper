@@ -12,6 +12,14 @@ const Timeline = () => {
   // console.log(text, "from timeline text");
   // console.log(video, "from timeline video");
 
+  if (call.length == 0 && text.length == 0 && video.length == 0) {
+    <div className="bg-white py-20">
+      <h2 className="text-lg font-medium text-[#1F2937] text-center">
+        No call, Text and Video!
+      </h2>
+    </div>;
+  }
+
   return (
     <div className="bg-[#F8FAFC] py-15 md:py-20">
       <div className="max-w-277.5 mx-auto px-2 space-y-6">
@@ -20,6 +28,14 @@ const Timeline = () => {
             Timeline{" "}
           </h2>
         </div>
+
+        {call.length == 0 && text.length == 0 && video.length == 0 && (
+          <div className="bg-white py-20">
+            <h2 className="text-lg font-medium text-[#1F2937] text-center">
+              No call, Text and Video!
+            </h2>
+          </div>
+        )}
 
         <div className="space-y-4">
           {/* call card */}
