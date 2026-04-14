@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import { useParams } from "react-router";
 import useFriends from "../../Hooks/useFriends";
 import Loading from "../../Components/Loading/Loading";
@@ -12,20 +12,20 @@ import { LuVideo } from "react-icons/lu";
 import { MdOutlineTextsms } from "react-icons/md";
 import { FaHistory } from "react-icons/fa";
 import { toast } from "react-toastify";
+import { TargetFriendContext } from "../../Components/ContextAPI/TargetFriendContextProvider";
 
 const FriendDetails = () => {
   const { Id } = useParams();
   const { friends, loading } = useFriends();
+  const { call, setCall, text, setText, video, setVideo } =
+    useContext(TargetFriendContext);
 
   const targetFriend = friends.find((friend) => friend.id === Number(Id));
   // console.log(targetFriend, "t");
 
-  const [call, setCall] = useState([]);
-  const [test, setText] = useState([]);
-  const [video, setVideo] = useState([]);
-
   const handleCall = (targetFriend) => {
-    console.log(targetFriend, "audio call");
+    setCall([...call, targetFriend]);
+
     toast.success(`${targetFriend.name} is calling Now!`, {
       position: "top-center",
       pauseOnHover: false,
@@ -35,7 +35,8 @@ const FriendDetails = () => {
   };
 
   const handleText = (targetFriend) => {
-    console.log(targetFriend, "text");
+    setText([...text, targetFriend]);
+
     toast.success(`${targetFriend.name} is texting Now!`, {
       position: "top-center",
       pauseOnHover: false,
@@ -45,7 +46,8 @@ const FriendDetails = () => {
   };
 
   const handleVideo = (targetFriend) => {
-    console.log(targetFriend, "Video call");
+    setVideo([...video, targetFriend]);
+
     toast.success(`${targetFriend.name} is video calling Now!`, {
       position: "top-center",
       pauseOnHover: false,
