@@ -9,7 +9,7 @@
     "tags": ["work"],
     "bio": "Work colleague from recent project.",
     "goal": 30,
-    "next_due_date": "2026-04-20"
+    "next_due_date": "Sep 12, 2026"
   },
   {
     "id": 2,
@@ -21,7 +21,7 @@
     "tags": ["family"],
     "bio": "Cousin, stays in touch occasionally.",
     "goal": 30,
-    "next_due_date": "2026-04-10"
+    "next_due_date": "Mar 26, 2026"
   },
   {
     "id": 3,
@@ -33,7 +33,7 @@
     "tags": ["work"],
     "bio": "Team member in design department.",
     "goal": 30,
-    "next_due_date": "2026-04-08"
+    "next_due_date": "Aug 16, 2026"
   },
   {
     "id": 4,
@@ -45,7 +45,7 @@
     "tags": ["hobby", "travel"],
     "bio": "Travel buddy from last summer trip.",
     "goal": 30,
-    "next_due_date": "2026-04-05"
+    "next_due_date": "Feb 22, 2026"
   },
   {
     "id": 5,
@@ -57,7 +57,7 @@
     "tags": ["work"],
     "bio": "Met during a conference.",
     "goal": 30,
-    "next_due_date": "2026-04-07"
+    "next_due_date": "Jul 08, 2026"
   },
   {
     "id": 6,
@@ -69,7 +69,7 @@
     "tags": ["family"],
     "bio": "Sibling, regular contact.",
     "goal": 30,
-    "next_due_date": "2026-05-01"
+    "next_due_date": "Dec 15, 2026"
   },
   {
     "id": 7,
@@ -81,7 +81,7 @@
     "tags": ["work"],
     "bio": "Colleague from marketing team.",
     "goal": 30,
-    "next_due_date": "2026-05-03"
+    "next_due_date": "Jan 20, 2026"
   },
   {
     "id": 8,
@@ -93,7 +93,7 @@
     "tags": ["hobby", "travel"],
     "bio": "Friend from hiking group.",
     "goal": 30,
-    "next_due_date": "2026-04-18"
+    "next_due_date": "Jun 18, 2026"
   },
   {
     "id": 9,
@@ -105,7 +105,7 @@
     "tags": ["work"],
     "bio": "Old teammate from previous job.",
     "goal": 30,
-    "next_due_date": "2026-04-19"
+    "next_due_date": "Apr 15, 2026"
   },
   {
     "id": 10,
@@ -117,7 +117,7 @@
     "tags": ["family"],
     "bio": "Aunt, needs regular check-ins.",
     "goal": 30,
-    "next_due_date": "2026-04-06"
+    "next_due_date": "Mar 28, 2026"
   },
   {
     "id": 11,
@@ -129,7 +129,7 @@
     "tags": ["work"],
     "bio": "Manager from previous role.",
     "goal": 30,
-    "next_due_date": "2026-04-04"
+    "next_due_date": "Nov 04, 2026"
   },
   {
     "id": 12,
@@ -141,6 +141,6 @@
     "tags": ["hobby", "travel"],
     "bio": "Met during international trip.",
     "goal": 30,
-    "next_due_date": "2026-05-05"
+    "next_due_date": "May 05, 2026"
   }
 ]
