@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { useParams } from "react-router";
+import { data, useParams } from "react-router";
 import useFriends from "../../Hooks/useFriends";
 import Loading from "../../Components/Loading/Loading";
 import {
@@ -24,6 +24,14 @@ const FriendDetails = () => {
   // console.log(targetFriend, "t");
 
   const handleCall = (targetFriend) => {
+    const dataFormate = new Date().toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    });
+
+    targetFriend["date"] = dataFormate;
+
     setCall([...call, targetFriend]);
 
     toast.success(`${targetFriend.name} is calling Now!`, {
@@ -35,6 +43,19 @@ const FriendDetails = () => {
   };
 
   const handleText = (targetFriend) => {
+    // const data = new Date();
+
+    const dataFormate = new Date().toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    });
+
+    targetFriend["date"] = dataFormate;
+    // console.log(dataFormate);
+
+    // console.log(targetFriend);
+
     setText([...text, targetFriend]);
 
     toast.success(`${targetFriend.name} is texting Now!`, {
@@ -46,6 +67,14 @@ const FriendDetails = () => {
   };
 
   const handleVideo = (targetFriend) => {
+    const dataFormate = new Date().toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    });
+
+    targetFriend["date"] = dataFormate;
+
     setVideo([...video, targetFriend]);
 
     toast.success(`${targetFriend.name} is video calling Now!`, {
