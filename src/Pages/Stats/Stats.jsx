@@ -36,6 +36,7 @@ const Stats = () => {
                   maxWidth: "500px",
                   maxHeight: "80vh",
                   aspectRatio: 1,
+                  paddingBottom: "30px",
                 }}
                 responsive
               >
