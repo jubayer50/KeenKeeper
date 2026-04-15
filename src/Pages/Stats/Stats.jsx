@@ -3,13 +3,16 @@ import { Legend, Pie, PieChart } from "recharts";
 import { TargetFriendContext } from "../../Components/ContextAPI/TargetFriendContextProvider";
 
 const Stats = () => {
-  const { call, setCall, text, setText, video, setVideo } =
-    useContext(TargetFriendContext);
+  const { communication } = useContext(TargetFriendContext);
+
+  const callData = communication.filter((item) => item.type === "call");
+  const textData = communication.filter((item) => item.type === "text");
+  const videoData = communication.filter((item) => item.type === "video");
 
   const data = [
-    { name: "Call", value: call.length, fill: "#244D3F" },
-    { name: "Text", value: text.length, fill: "#7E35E1" },
-    { name: "Video", value: video.length, fill: "#37A163" },
+    { name: "Call", value: callData.length, fill: "#244D3F" },
+    { name: "Text", value: textData.length, fill: "#7E35E1" },
+    { name: "Video", value: videoData.length, fill: "#37A163" },
   ];
 
   return (
@@ -24,7 +27,9 @@ const Stats = () => {
             By Interaction Type
           </h3>
 
-          {text.length == 0 && call.length == 0 && video.length == 0 ? (
+          {videoData.length == 0 &&
+          textData.length == 0 &&
+          callData.length == 0 ? (
             <div>
               <h2 className="py-10 text-center text-lg">No data for Chart.</h2>
             </div>

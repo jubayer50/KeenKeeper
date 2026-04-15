@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { data, useParams } from "react-router";
+import { useParams } from "react-router";
 import useFriends from "../../Hooks/useFriends";
 import Loading from "../../Components/Loading/Loading";
 import {
@@ -17,22 +17,29 @@ import { TargetFriendContext } from "../../Components/ContextAPI/TargetFriendCon
 const FriendDetails = () => {
   const { Id } = useParams();
   const { friends, loading } = useFriends();
-  const { call, setCall, text, setText, video, setVideo } =
-    useContext(TargetFriendContext);
+  const { communication, setCommunication } = useContext(TargetFriendContext);
 
   const targetFriend = friends.find((friend) => friend.id === Number(Id));
-  // console.log(targetFriend, "t");
 
   const handleCall = (targetFriend) => {
-    const dataFormate = new Date().toLocaleDateString("en-US", {
+    // set time
+    const timeAndDateFormate = `${new Date().toLocaleDateString("en-US", {
       year: "numeric",
       month: "long",
       day: "numeric",
-    });
+    })} at ${new Date().toLocaleTimeString("en-US", {
+      hour: "2-digit",
+      minute: "2-digit",
+    })}`;
 
-    targetFriend["date"] = dataFormate;
+    // updating targetFriend object
+    const newTargetFriend = {
+      ...targetFriend,
+      type: "call",
+      date: timeAndDateFormate,
+    };
 
-    setCall([...call, targetFriend]);
+    setCommunication([...communication, newTargetFriend]);
 
     toast.success(`${targetFriend.name} is calling Now!`, {
       position: "top-center",
@@ -43,20 +50,24 @@ const FriendDetails = () => {
   };
 
   const handleText = (targetFriend) => {
-    // const data = new Date();
-
-    const dataFormate = new Date().toLocaleDateString("en-US", {
+    // set time
+    const timeAndDateFormate = `${new Date().toLocaleDateString("en-US", {
       year: "numeric",
       month: "long",
       day: "numeric",
-    });
+    })} at ${new Date().toLocaleTimeString("en-US", {
+      hour: "2-digit",
+      minute: "2-digit",
+    })}`;
 
-    targetFriend["date"] = dataFormate;
-    // console.log(dataFormate);
+    // updating targetFriend object
+    const newTargetFriend = {
+      ...targetFriend,
+      type: "text",
+      date: timeAndDateFormate,
+    };
 
-    // console.log(targetFriend);
-
-    setText([...text, targetFriend]);
+    setCommunication([...communication, newTargetFriend]);
 
     toast.success(`${targetFriend.name} is texting Now!`, {
       position: "top-center",
@@ -67,15 +78,24 @@ const FriendDetails = () => {
   };
 
   const handleVideo = (targetFriend) => {
-    const dataFormate = new Date().toLocaleDateString("en-US", {
+    // set time
+    const timeAndDateFormate = `${new Date().toLocaleDateString("en-US", {
       year: "numeric",
       month: "long",
       day: "numeric",
-    });
+    })} at ${new Date().toLocaleTimeString("en-US", {
+      hour: "2-digit",
+      minute: "2-digit",
+    })}`;
 
-    targetFriend["date"] = dataFormate;
+    // updating targetFriend object
+    const newTargetFriend = {
+      ...targetFriend,
+      type: "video",
+      date: timeAndDateFormate,
+    };
 
-    setVideo([...video, targetFriend]);
+    setCommunication([...communication, newTargetFriend]);
 
     toast.success(`${targetFriend.name} is video calling Now!`, {
       position: "top-center",

@@ -5,14 +5,14 @@ import TextCard from "../../Components/Timeline/TextCard";
 import VideoCard from "../../Components/Timeline/VideoCard";
 
 const Timeline = () => {
-  const { call, setCall, text, setText, video, setVideo } =
-    useContext(TargetFriendContext);
+  const { communication } = useContext(TargetFriendContext);
 
   const [filter, setFilter] = useState("all");
-  // console.log(filter);
-  // console.log(call, "from timeline call");
-  // console.log(text, "from timeline text");
-  // console.log(video, "from timeline video");
+
+  const filterData =
+    filter === "all"
+      ? communication
+      : communication.filter((item) => item.type === filter);
 
   return (
     <div className="bg-[#F8FAFC] py-15 md:py-20">
@@ -26,7 +26,7 @@ const Timeline = () => {
             <select
               value={filter}
               onChange={(e) => setFilter(e.target.value)}
-              className="bg-white p-1.5 border border-[#] w-40 rounded-lg"
+              className="bg-white px-4 py-2 border border-[#E9E9E9] text-[#64748B] w-60 rounded-lg text-lg appearance-none"
             >
               <option value="all">All</option>
               <option value="call">Call</option>
@@ -36,67 +36,27 @@ const Timeline = () => {
           </div>
         </div>
 
-        {/* empty massage */}
-        {call.length == 0 && text.length == 0 && video.length == 0 && (
-          <div className="bg-white py-20">
+        {/* new empty massage */}
+        {communication.length === 0 && (
+          <div className="bg-white rounded-lg py-20">
             <h2 className="text-lg font-medium text-[#1F2937] text-center">
-              No call, Text and Video!
+              No call, video, and Text!
             </h2>
           </div>
         )}
 
         {/* all card show */}
-        {filter === "all" && (
-          <div className="space-y-4">
-            {/* call card */}
-            <div className="space-y-4">
-              {call.map((item, i) => (
-                <CallCard key={i} item={item}></CallCard>
-              ))}
-            </div>
-
-            {/* video call card */}
-            <div className="space-y-4">
-              {video.map((item, i) => (
-                <VideoCard key={i} item={item}></VideoCard>
-              ))}
-            </div>
-
-            {/* text card */}
-            <div className="space-y-4">
-              {text.map((item, i) => (
-                <TextCard key={i} item={item}></TextCard>
-              ))}
-            </div>
-          </div>
-        )}
-
-        {/* only text */}
-        {filter === "text" && (
-          <div className="space-y-4">
-            {text.map((item, i) => (
-              <TextCard key={i} item={item}></TextCard>
-            ))}
-          </div>
-        )}
-
-        {/* only video */}
-        {filter === "video" && (
-          <div className="space-y-4">
-            {video.map((item, i) => (
-              <VideoCard key={i} item={item}></VideoCard>
-            ))}
-          </div>
-        )}
-
-        {/* only call */}
-        {filter === "call" && (
-          <div className="space-y-4">
-            {call.map((item, i) => (
-              <CallCard key={i} item={item}></CallCard>
-            ))}
-          </div>
-        )}
+        {filterData.map((item, i) => {
+          if (item.type === "call") {
+            return <CallCard key={i} item={item}></CallCard>;
+          }
+          if (item.type === "text") {
+            return <TextCard key={i} item={item}></TextCard>;
+          }
+          if (item.type === "video") {
+            return <VideoCard key={i} item={item}></VideoCard>;
+          }
+        })}
       </div>
     </div>
   );
